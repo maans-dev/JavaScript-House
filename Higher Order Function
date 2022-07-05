@@ -1,0 +1,21 @@
+function headingFactory(colour) {
+    const closure = function(text){
+        const heading = document.createElement('h1');
+        heading.setAttribute('style', 'color: ' + colour);
+        heading.textContent = text;
+        return heading;
+    }
+    return closure;
+}
+
+
+const createRedHeading = headingFactory('red');
+const createBlueHeading = headingFactory('blue');
+
+const createBlackHeading = headingFactory('black');
+const createWhiteHeading = headingFactory('white');
+
+const head1 = createBlackHeading('Wassup')
+
+main.appendChild(head1);
+
