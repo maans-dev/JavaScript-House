@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./dragon.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    color: chartreuse;
+    font-size: 8rem;
+    margin-top: 9rem;
+}
+
+.countdown-countainer {
+    display: flex;
+}
+
+.big-text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+    font-weight: bold;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown span { 
+    font-size: 1.5rem;
+}
