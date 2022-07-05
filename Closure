@@ -1,0 +1,45 @@
+  // callback - a function that is passed to another function. 
+            window.addEventListener('click', function(event){
+
+            });
+
+            // why? 
+            // customising the logic
+            // more flexible
+
+            function shopping(budget, afterShoppingCallback) {
+                const spent = 100;
+
+                budget = budget - spent;
+
+                budget = afterShoppingCallback(budget);
+
+                return budget;
+            }
+
+            shopping(1000, function (budget) {
+                console.log("watch movie");
+
+                return budget - 20;
+            });
+
+            // callback hell
+            // ugly ugly ugly...
+            // use promise instead (learn in next lesson)
+            shopping(1000, function (budget) {
+                console.log("watch movie");
+
+                shopping(budget, function (budget) {
+                    console.log("watch movie");
+
+                    shopping(budget, function (budget) {
+                        console.log("watch movie");
+
+                        shopping(budget, function (budget) {
+                            console.log("watch movie");
+
+                            
+                        });
+                    });
+                });
+            });
