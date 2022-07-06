@@ -1,0 +1,56 @@
+//Spread && Rest Opperators
+
+//Clone objects
+const car1 = {
+    colour: 'black',
+};
+
+const clonedCar = Object.assign({}, car1);
+
+//or
+
+const clonedCar2 = {...car1};
+
+clonedCar2.colour = 'white';
+
+
+const array1 = [1,2,3,4,5];
+const array2 = [ 6,7,8,9];
+
+const newArray = [
+    ...array1,
+    ...array2
+];
+
+console.log(newArray);
+
+const obj = {
+    hey: 'there',
+    food: 'apples'
+};
+
+
+const obj2 = {
+    hey: 'you',
+    food: 'banana',
+}
+
+const obj3 = {
+    ...obj1,
+    ...obj2,
+}
+
+
+ 
+
+// you want a functional function that can take multiple numbers and add them together in an array:
+
+function add(...nums) {
+         let sum = 0;
+        for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+        }
+        return sum;
+};
+
+const result = add(1,3,4,5,7,8)
