@@ -1,0 +1,63 @@
+//Object destructuring 
+const sandwich = {
+    bread: "ciabatta",
+    meat: "beef",
+    kefir: "grains",
+    cheese: "goats white",
+    salad: ["lettuce", "rocket", "tamato", "mustard"]
+};
+
+const { bread, meat } = sandwich
+console.log(bread, meat);
+
+// can instead use let keyword change values but not orignal object
+
+
+let { kefir, cheese} = sandwich
+
+kefir = "milk";
+cheese = "goude";
+
+console.log(kefir);
+
+const regPerson = {
+    firstname: "bill",
+    lastname: "wilsons",
+    spouse: {
+        firstname: "Milly",
+        lastname: "Bobby"
+    }
+};
+
+const lordify = ( {spouse: {firstname}})=>{
+    console.log(`${firstname} of Hermanus`)  
+};
+
+lordify(regPerson);
+
+//Destructuring Arrays:
+
+const [secondAnimal] = ["Horse", "Cow", "Bunny", "Mouse"];
+
+console.log(secondAnimal);
+
+//Object Literal INhancement
+
+const namees = 'ELLIOT'
+const elavation = "200Feet"
+
+const names = { namees, elavation};
+
+// Made an object using variables/consts using {}
+
+//Creating methods using object literal enhancement.
+
+const mountain = "Mt.Everst";
+const hightSea = "2800meters";
+const printMountain =()=>{
+    console.log(`${this.name} is ${this.hightSea} tall and is the highest`);
+};
+
+const Ole = { mountain, hightSea, printMountain };
+
+Ole.printMountain();
