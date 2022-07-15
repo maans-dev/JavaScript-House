@@ -1,0 +1,31 @@
+//Array includes() checks if the item is an array.
+//conditional statements
+
+const groceries = [ 'milk', 'avocado', 'sirloin', 'pineapple']
+
+let item = 'pears'
+
+const isIncluded = groceries.includes(item)
+
+console.log(isIncluded); //false
+
+//String includes() usefull if you're only looking to get strings.
+
+const products = 'merryjane'
+
+const result = products.includes('merry');
+
+const person = {
+    title: 'Major',
+    name: 'James G',
+    belt: 'black',
+    rank: 'world heavyweight'
+}
+
+const results = person.title.includes('m');
+
+const filtered = person.filter((person)=>person.title.toLowerCase().includes(text))
+
+
+
+
