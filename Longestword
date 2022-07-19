@@ -1,0 +1,41 @@
+function longestWord(str) { 
+    let words = str.split(" ")
+    let longestWord = ''
+
+    for (let word of words) {
+        if (word.length>longestWord.length) {
+            longestWord = word;
+        }
+    }
+
+    return longestWord;
+}
+
+
+console.log(longestWord('Hello brother how are you'));
+
+//Upgraded
+
+function upgradeLong(str) {
+    let words = str.split("    ")
+    let size = 0;
+    let max = [''];
+
+    for(let i = 0; i<words.length; i++){
+        if(words[i].length>=size){
+            size = words[i].length;
+            if(max[max.length-1].length < words[i].length) {
+                max = [];
+                max.push(words[i])
+            }
+        }
+        else {
+            max= [...max, words[i]]
+        }
+    }
+    return [...max]
+}
+
+//Whatever you get back from the for loop(iterates) is the total sum "size" of the array.
+//>= is important here checks multiple values
+//max[] - looking for that value
