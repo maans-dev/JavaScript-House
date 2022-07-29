@@ -1,0 +1,31 @@
+window.onload = function() {
+    document.getElementById("number-submit").addEventListener("click", playGame)
+    document.getElementById("restart-game").addEventListener("click", initGame)
+};
+
+//capture the value
+function playGame () {
+    let value = document.getElementById("number-guess").value
+};
+
+//generate random number save to var
+let correctNumber = getRandomNumber();
+function getRandomNumber() {
+    const numberArray = [];
+    while(numberArray.length<101){
+     let randomOneHundred = Math.floor(Math.random() * 100) + 1;
+     if(numberArray.indexOf(randomOneHundred) === -1) numberArray.push(randomOneHundred)
+    }
+};
+
+//console if to high low or correct
+function playGame() {
+    let numberGuess = document.getElementById('number-guess').value
+    if (numberGuess === correctNumber) {
+        console.log("Your Number is correct");
+    } if (numberGuess > correctNumber) {
+        console.log("To High")
+    } else {
+        console.log("To Low");
+    }
+};
