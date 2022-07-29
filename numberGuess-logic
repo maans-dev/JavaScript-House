@@ -29,3 +29,21 @@ function playGame() {
         console.log("To Low");
     }
 };
+
+//log the playGame logic
+function returnStatement(numberGuess) {
+  if (numberGuess === correctNumber) {
+        console.log("Your Number is correct");
+    } else if (numberGuess > correctNumber) {
+        console.log("To High")
+    } else {
+        console.log("To Low");
+    }
+}
+
+//function to show you won
+function wonUser() {
+    const text = "You won the NUMBER GAME"
+
+    document.getElementById("result").innerHTML = dialog;
+}
