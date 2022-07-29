@@ -47,3 +47,9 @@ function wonUser() {
 
     document.getElementById("result").innerHTML = dialog;
 }
+
+function wonUser() {
+    const text = "You won the NUMBER GAME"
+
+    document.getElementById("result").innerHTML = dialog;
+}
