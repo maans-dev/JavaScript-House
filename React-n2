@@ -1,0 +1,50 @@
+//Understanding and translatable front-end & back-end
+//Integrating API's 
+//Getting stuck all the time is crucial to learning&deeping material
+//Get the information I want to display what I need. Digging end-points that transitions to the front-end.
+//Learning to navigate documentation important.
+
+//Context is important when getting asked questions.
+//Basic BoilerPlate, Cemantic very descriptive. Basic Outlet. Accessibility
+//New developers join, easy accessible for blind and underlying software.
+//http request methods: GETmethods(httprequest), POSTMethods(create), PUTMethods(update) & DeleteMethod(remove). Get information from API endpoints.
+
+//Mobile first design and development, 1st Mind. [Scale it out]
+
+//CSS specifity ID or Class. [class] 
+//Takes presidence over normal html. 
+
+//Box-model all tags are rectangles with padding,content,border in CSS
+
+//only two arguments
+function add(x, y) {
+    return x + y;
+};
+console.log('add', add(1,2));
+
+//function any number of args
+function add2(...args){
+    let sum = [];
+    for (let i = 0; i<args.length; i++) {
+        sum += args[i]
+    }
+}
+console.log('sum',add(1,4,5,6))
+
+//Write a function that returns a promise that resolves after n number of miliseconds                    
+
+function delay(n) {
+    return new Promise(resolve => setTimeout(resolve, milliseconds));
+}
+
+//Write a function that takes an array of objects, and returns an array of the objects "name" property, only of the property exists.
+
+function getNames(array) {
+    let results = [];
+    for (let i = 0; i < array.length; i++) {
+       if (array[i].hasOwnProperty("name")) {
+         results.push(array[i].name)
+       } //boolean
+    }
+    return results;
+}
