@@ -1,0 +1,52 @@
+import React from 'react'
+
+
+//Need to change the current state with a function ot display change.
+//Directional Data Flow
+const React = () => {
+    const [state, useState] = useState()
+
+    function handleChange(e) {
+        setState(e.target.value);
+    }
+
+  return (
+    <div className="app">react
+        <input type="text" value={state} onChange={handleChange}>
+        </input>
+    </div>
+  )
+}
+
+export default React
+
+//WHat is the diffrence between props and state?
+//Component def  nies data in itself. Props get passed.
+
+// const react = () => {
+//   return (
+//     <div>react</div>
+//   )
+// }
+
+
+//Controlled vs UnControlled Component? Inside each component the value= is either set or not. In a controlled value={value} you use value UN-controlled ref={inputRef}
+
+
+//What are REFS IN REACT?
+//Why in UseEffect? You need to wait for the component to render, you can see useEffect is only running once.
+
+function App () {
+    const inputRef = useRef();
+
+    useEffect(() => {
+        inputRef.current.focus();
+    }, [])
+
+    return (
+        <div className='App'>
+            <input ref={inputRef} type="text"></input>
+        </div>
+    )
+}
+
