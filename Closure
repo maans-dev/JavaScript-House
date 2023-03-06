@@ -6,7 +6,6 @@
             // why? 
             // customising the logic
             // more flexible
-
             function shopping(budget, afterShoppingCallback) {
                 const spent = 100;
 
