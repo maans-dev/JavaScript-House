@@ -3,6 +3,12 @@
 // 	important: boolean;
 //	children: JSX.Element | JSX.Element[];
 //   }
+
+// interface MessageProps {
+// 	text: string;
+// 	important: boolean;
+//	children: JSX.Element | JSX.Element[];
+//   }
    
 //   function Message({ text, important, children }: MessageProps) {
 // 	return (
